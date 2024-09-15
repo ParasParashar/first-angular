@@ -1,0 +1,11 @@
+<app-search (onSearchProduct)="onSearchEventFilter($event)"></app-search>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
+  @for (item of products; track $index) {
+  <app-product-card
+    [product]="item"
+    (viewProduct)="onViewProduct($event)"
+  ></app-product-card>
+  }@empty {
+  <p class="p-5 text-center text-xl font-serif">No Products Found</p>
+  }
+</div>

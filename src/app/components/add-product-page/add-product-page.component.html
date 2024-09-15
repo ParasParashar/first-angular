@@ -1,0 +1,38 @@
+<div class="p-3 w-full h-full flex items-center justify-center">
+  <form
+    (ngSubmit)="onFormSubmit()"
+    class="bg-neutral-800 w-full max-w-2xl py-8 rounded-xl p-3 flex flex-col gap-3 items-center justify-center"
+  >
+    <h6 class="p-3 rounded-xl bg-black w-full text-center">
+      Enter Your Product Details
+    </h6>
+
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="product.title"
+      placeholder="Enter your title"
+      class="w-full text-xl bg-black rounded-full p-2"
+    />
+    <input
+      type="text"
+      name="thumbnail"
+      [(ngModel)]="product.thumbnail"
+      placeholder="Enter your thumbnail"
+      class="w-full text-xl bg-black rounded-full p-2"
+    />
+    <input
+      type="number"
+      name="price"
+      [(ngModel)]="product.price"
+      placeholder="Enter your Price"
+      class="w-full text-xl bg-black rounded-full p-2"
+    />
+    <button
+      type="submit"
+      class="text-xl bg-blue-500 rounded-xl hover:bg-blue-600 w-full p-2 text-center"
+    >
+      Create Product
+    </button>
+  </form>
+</div>

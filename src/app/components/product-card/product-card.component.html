@@ -1,0 +1,24 @@
+<div
+  (click)="onClickProduct(product.id)"
+  class="flex w-full h-full flex-col gap-2 p-4 bg-white rounded-lg shadow-lg"
+>
+  <!-- Product Image -->
+  <div class="h-48 w-full bg-gray-200 rounded-md overflow-hidden">
+    <img
+      [src]="product.thumbnail"
+      alt="Product Image"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <h3 class="text-lg font-semibold text-gray-800">{{ product.title }}</h3>
+
+  <p class="text-gray-600">${{ product.price }}</p>
+
+  <button
+    (click)="addToCart(product.price)"
+    class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+  >
+    View full product
+  </button>
+</div>
